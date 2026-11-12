@@ -1,6 +1,13 @@
-  .category-buttons {
+.category-buttons {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
             flex-wrap: wrap;
+        }
+
+
+       
+        .cat-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
         }
