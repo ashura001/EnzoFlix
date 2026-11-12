@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">🎬 EnzoFlix</div>
+         <nav class="nav-links">
+            <button class="nav-btn active" onclick="showPage('accueil')">Accueil</button>
+            <button class="nav-btn" onclick="showPage('services')">Services</button>
+            <button class="nav-btn" onclick="showPage('categories')">Catégories</button>
+        </nav>
+    </header>
+<main>
+    <section id="accueil" class="page-section active">
+            <h1>Bienvenue sur EnzoFlix</h1>
+<div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher un film (ex: Batman, Avatar)...">
+                <button id="searchButton">Rechercher</button>
+            </div>
+
+
+            <div id="accueilMoviesGrid" class="movies-grid"></div>
+        </section>
+
+</main>
 </body>
 </html>
