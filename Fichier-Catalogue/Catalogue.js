@@ -1,3 +1,3 @@
-function fetchCategory(categoryName) {
-    fetchMovies(categoryName)
-}
+ function fetchCategory(categoryName) {
+            fetchMovies(categoryName, 'categoryMoviesGrid');
+        }
