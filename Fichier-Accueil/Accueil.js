@@ -1,7 +1,7 @@
+const { BASE_URL } = require("../Fichier-Catalogue/Catalogue");
+
 // Configuration de l'API OMDb
 const API_KEY = '3c0e7e42';
-const BASE_URL = 'https://www.omdbapi.com/';
-
 // Fonction de requête API
 async function fetchMovies(searchTerm, targetContainerId) {
     const container = document.getElementById(targetContainerId);
