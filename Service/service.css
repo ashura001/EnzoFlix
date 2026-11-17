@@ -1,0 +1,50 @@
+.services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+
+        .service-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+
+
+        .service-card code {
+            background-color: #0f172a;
+            color: var(--accent-color);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+
+        /* Bloc d'arborescence VS Code */
+        .vscode-tree {
+            background-color: #090d16;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #38bdf8;
+            margin-top: 1rem;
+            line-height: 1.6;
+        }

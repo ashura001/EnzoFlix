@@ -7,15 +7,26 @@
 </head>
 <body>
     <section id="Categories" class="page-section"></section>
-        <h1>Nos Services & Structure VS Code</h1>
+        <h1>Nos Services </h1>
         <p class="subtitle">A quoi sert notre projet ?</p>
-        <div class="category-buttons">
-            <button class="cat-btn" onclick="fetchCategory('Action')">Action</button>
-            <button class="cat-btn" onclick="fetchCategory('Comedy')">Comédie</button>
-            <button class="cat-btn" onclick="fetchCategory('Horror')">Horreur</button>
-                <button class="cat-btn" onclick="fetchCategory('Sci-Fi')">Science-Fiction</button>
-    </div>
-    <div id="categoryMoviesGrid" class="movie-grid"></div>
+        <div class="services-grid">
+            <div class="service-card"></div>
+            <h3> Intégration API OMDb</h3>
+                    <p>Connexion directe à l'API <code>OMDb (Open Movie Database)</code> pour récupérer en temps réel les données de milliers de films via des requêtes HTTP asynchrones.</p>
+                </div>
+            <div class="service-card" style="margin-top: 1.5rem;">
+                <h3>📂 Structure du Projet sous Visual Studio Code</h3>
+                <p>Pour développer ce projet proprement, l'espace de travail sous <strong>Visual Studio Code</strong> est structuré autour d'un dossier racine regroupant le code source et les assets :</p>
+               
+                <div class="vscode-tree">
+                    📁 Corp de notre projet EnzoFlix/<br>
+                    ↳ 📄 index.html  <span># Structure HTML & Logique SPA des 3 pages</span><br>
+                    ↳ 🎨 style.css   <span># Styles globaux, thèmes sombres & grille CSS</span><br>
+                    ↳ 📜 script.js   <span># Gestion des événements et appels fetch() à l'API OMDb</span>
+                </div>
+            </div>
+        </section>
+
     </section>
     
 </body>
