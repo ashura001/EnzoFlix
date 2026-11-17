@@ -4,87 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnzoFlix - Nos Services</title>
-    <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #38bdf8;
-            --accent-hover: #0ea5e9;
-            --border-color: #334155;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p.subtitle {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .service-card {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .service-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .service-card p {
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card code {
-            background-color: #0f172a;
-            color: var(--accent-color);
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        /* Bloc d'arborescence VS Code */
-        .vscode-tree {
-            background-color: #090d16;
-            border: 1px solid #334155;
-            border-radius: 8px;
-            padding: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.9rem;
-            color: #38bdf8;
-            margin-top: 1rem;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="service.css">
 </head>
 <body>
     <section id="Services" class="page-section">
@@ -93,12 +13,12 @@
         
         <div class="services-grid">
             <div class="service-card">
-                <h3> Moteur de Recherche & Exploration</h3>
+                <h3>🔍 Moteur de Recherche & Exploration</h3>
                 <p>EnzoFlix est un outil d'exploration cinématographique conçu pour rechercher instantanément des films, consulter leurs informations et naviguer par catégories. <strong>Attention :</strong> notre plateforme sert uniquement à la recherche et à la découverte de films, aucun service de visionnage ou de streaming n'est proposé.</p>
             </div>
 
             <div class="service-card">
-                <h3>Intégration API OMDb</h3>
+                <h3>⚡ Intégration API OMDb</h3>
                 <p>Connexion directe à l'API <code>OMDb (Open Movie Database)</code> pour récupérer en temps réel les données de milliers de films via des requêtes HTTP asynchrones.</p>
             </div>
             
