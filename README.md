@@ -52,4 +52,4 @@ Exemple du rendu visuel
 -------------------------------------------------------------------------------------------
 Conclusion :
 
-    Cette charte graphique a pour objectif de donner au site une identité visuelle cohérente et reconnaissable. Les couleurs sombres créent une atmosphère immersive, tandis que le turquoise apporte du contraste et facilite l'utilisation du site. La typographie simple garantit une lecture confortable. L'ensemble donne un rendu moderne, élégant et inspiré des plateformes de streaming comme Netflix.
+Cette charte graphique a pour objectif de donner au site une identité visuelle cohérente et reconnaissable. Les couleurs sombres créent une atmosphère immersive, tandis que le turquoise apporte du contraste et facilite l'utilisation du site. La typographie simple garantit une lecture confortable. L'ensemble donne un rendu moderne, élégant et inspiré des plateformes de streaming comme Netflix.
