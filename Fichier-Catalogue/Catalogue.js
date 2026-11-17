@@ -52,4 +52,3 @@ function fetchCategory(categoryName) {
 document.addEventListener('DOMContentLoaded', () => {
     fetchMovies('Action', 'categoryMoviesGrid');
 });
-export const BASE_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=3c0e7e42';
