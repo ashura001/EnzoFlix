@@ -47,7 +47,7 @@ Exemple du rendu visuel
 
 - Voici une idée de l'association des couleurs sur une interface de site de streaming :
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 -------------------------------------------------------------------------------------------
 Conclusion :
