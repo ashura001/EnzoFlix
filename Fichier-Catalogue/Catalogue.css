@@ -1,54 +1,61 @@
-.movies-grid,
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
+:root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border-color: #334155;
+        }
 
-.movie-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
 
-.movie-poster {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 2rem;
+        }
 
-.movie-info {
-    padding: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    gap: 0.6rem;
-}
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
 
-.movie-title {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text-color);
-}
+        p.soustitre {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
 
-.movie-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
+        .category-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
 
-.movie-type {
-    background-color: rgba(56, 189, 248, 0.15);
-    color: var(--accent-color);
-    padding: 0.15rem 0.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-}
+        .cat-btn {
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .cat-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border-color: var(--accent-color);
+        }
+
+        .page-section {
+            display: block;
+        }
