@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="Accueil.css">
+    <title>Accueil</title>
+   
 </head>
 <body>
- 
-<section id="accueil" class="page-section active">
+
+    <header>
+        <div class="logo">EnzoFlix</div>
+        <nav class="nav-links">
+            <button class="nav-btn active">Accueil</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="accueil" class="page-section active">
             <h1>Bienvenue sur EnzoFlix</h1>
             <p class="subtitle">Recherchez vos films préférés.</p>
            
@@ -17,9 +26,9 @@
                 <button id="searchButton">Rechercher</button>
             </div>
 
-
             <div id="accueilMoviesGrid" class="movies-grid"></div>
         </section>
-<body>
- <html>  
-
+    </main>
+<script src="Accueil.js"></script>
+</body>
+</html>
