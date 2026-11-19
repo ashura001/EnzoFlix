@@ -59,7 +59,7 @@ Cette charte graphique a pour objectif de donner au site une identité visuelle 
 
 ### Diagramme de cas d'utilisaion
 
-![alt text](image-2.png)
+![alt text](image-5.png)
 
 ### Diagramme de block
 
