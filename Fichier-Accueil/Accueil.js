@@ -1,43 +1,44 @@
-// Configuration de l'API OMDb
-const API_KEY = '3c0e7e42';
-const BASE_URL = 'https://www.omdbapi.com/';
+const ITUNES_URL = 'https://itunes.apple.com/search';
 
-// Fonction de requête API
 async function fetchMovies(searchTerm, targetContainerId) {
     const container = document.getElementById(targetContainerId);
     if (!container) return;
 
-    container.innerHTML = '<div class="loader">Chargement des films...</div>';
+    container.innerHTML = '<div class="loader">Chargement...</div>';
 
     try {
-        const response = await fetch(`${BASE_URL}?apikey=${API_KEY}&s=${encodeURIComponent(searchTerm)}`);
+        const url = `${ITUNES_URL}?term=${encodeURIComponent(searchTerm)}&media=movie&limit=20`;
+        const response = await fetch(url);
         const data = await response.json();
 
-        if (data.Response === "True") {
-            displayMovies(data.Search, container);
+        if (data.results && data.results.length > 0) {
+            displayMovies(data.results, container);
         } else {
-            container.innerHTML = `<div class="loader">Aucun film trouvé pour "${searchTerm}".</div>`;
+            container.innerHTML = `<div class="loader">Aucun résultat pour "${searchTerm}".</div>`;
         }
     } catch (error) {
-        console.error("Erreur API :", error);
-        container.innerHTML = `<div class="loader">Erreur lors de la connexion à l'API.</div>`;
+        console.error("Erreur API iTunes :", error);
+        container.innerHTML = `<div class="loader">Erreur : ${error.message}</div>`;
     }
 }
 
-// Affichage dynamique des cartes films
 function displayMovies(movies, container) {
     container.innerHTML = '';
     movies.forEach(movie => {
-        const posterUrl = movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=Pas+d'affiche";
-       
+        const posterUrl = movie.artworkUrl100
+            ? movie.artworkUrl100.replace('100x100bb', '600x600bb')
+            : "https://via.placeholder.com/300x450?text=Pas+d'affiche";
+        const title = movie.trackName || 'Titre inconnu';
+        const year = movie.releaseDate ? movie.releaseDate.slice(0, 4) : 'N/A';
+
         const card = document.createElement('div');
         card.classList.add('movie-card');
         card.innerHTML = `
-            <img src="${posterUrl}" alt="${movie.Title}" class="movie-poster">
+            <img src="${posterUrl}" alt="${title}" class="movie-poster">
             <div class="movie-info">
-                <div class="movie-title">${movie.Title}</div>
+                <div class="movie-title">${title}</div>
                 <div class="movie-footer">
-                    <span>${movie.Year}</span>
+                    <span>${year}</span>
                     <span class="movie-type">Film</span>
                 </div>
             </div>
@@ -46,7 +47,6 @@ function displayMovies(movies, container) {
     });
 }
 
-// Événements de recherche sur l'accueil
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
@@ -65,6 +65,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Chargement par défaut sur l'accueil
-    fetchMovies('Avengers', 'accueilMoviesGrid');
+    fetchMovies('Batman', 'accueilMoviesGrid');
 });
